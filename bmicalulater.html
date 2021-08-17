@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<hrml lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>BMI</title><hr>
+    </head>
+    <style>
+        body{margin: 0;
+            padding: 0;
+            text-align:center;
+            background-color: rgb(247, 236, 242);
+            color: honeydew;}
+            div{width: 500px;
+                position: fixed;
+                top: 20%;
+                left: 25%;
+                background-color: rgb(240, 70, 155);
+                padding: 20px;
+                border-radius: 10px;}
+            .text{font-size: 25px;
+                  text-align:center;}
+            #h,#w{
+                text-align: left;
+                color: rgb(25, 26, 24);}
+            #btn{background-color: rgb(103, 134, 103);
+                 color: rgb(247, 252, 247);}       
+           
+    </style>
+    <script type="text/javascript">
+        function bmi()
+            { var h=document.getElementById("h").value;
+              var w=document.getElementById("w").value;
+              var bmi=w/((h/100*h/100));
+              var bmio=(bmi.toFixed(2));
+    
+              document.getElementById("result").innerHTML="your BMI is" +bmio;
+            }
+    </script>
+     <body>
+        <div>
+        <h1>BMI CALCULATER</h1>
+        <p class="text">HEIGHT</p>
+        <input type="text"id="h"> in CM <BR></BR>
+        <p class="text">WEIGHT</p>
+        <input type="text"id="w"> in KG <BR></BR>
+        <p id="result"></p>
+        <button id="btn"onclick="bmi()">CALCULATE</button>
+        </div>
+    </body>
+</hrml>
